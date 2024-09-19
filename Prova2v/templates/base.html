@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%} Layout {% endblock %}</title>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+
+    <header>
+        <div class="header">
+            <a href="{{url_for('index')}}">Inicial</a>
+            <a href="{{url_for('login')}}">Login</a>
+            <a href="{{url_for('cadastro')}}">Cadastro</a>
+            <a href="{{url_for('cadastro_exercicios')}}">Exercicios</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="corpo">
+
+            {% block conteudo %}
+
+            {% endblock %}
+
+        </div>
+
+    </main>
+
+    <footer >
+        <div class="rodape">
+            <p>Avaliação do segundo bismestre | Mickaelle Karine, 1v.</p>
+        </div>
+
+    </footer>
+    
+</body>
+</html>
