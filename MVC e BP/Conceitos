@@ -32,3 +32,7 @@ Este arquivo pode estar vazio ou pode executar inicializações de pacote.
 * Módulos são arquivos Python que contêm funções e definições.
 * Pacotes são diretórios que contêm múltiplos módulos e um arquivo __init__.py.
 
+<h1>MVC</h1>
+Model: O models.py contém as funções que manipulam a lista de tarefas.
+View: O index.html exibe as tarefas e fornece um formulário para adicionar novas.
+Controller: O controllers.py gerencia as rotas. A rota / exibe a lista de tarefas, e a rota /adicionar adiciona uma nova tarefa.
