@@ -1,0 +1,34 @@
+Um módulo é um arquivo que contém definições e instruções em Python. Os módulos permitem que você organize seu código em partes menores e reutilizáveis. 
+Você pode criar seus próprios módulos ou usar módulos incorporados.
+
+Exemplo de Módulo
+Vamos criar um módulo simples chamado meu_modulo.py:
+
+python
+
+Copiar
+# meu_modulo.py
+
+  def saudacao(nome):
+      return f"Olá, {nome}!"
+  
+  def soma(a, b):
+      return a + b
+
+Para usar esse módulo em outro arquivo Python, você pode importá-lo da seguinte maneira:
+
+python
+# main.py
+
+import meu_modulo 
+
+print(meu_modulo.saudacao("Maria"))
+print(meu_modulo.soma(5, 3))
+
+Um pacote é uma coleção de módulos organizados em um diretório/pasta. 
+Um pacote é identificado por um diretório que contém um arquivo especial chamado __init__.py. 
+Este arquivo pode estar vazio ou pode executar inicializações de pacote.
+
+* Módulos são arquivos Python que contêm funções e definições.
+* Pacotes são diretórios que contêm múltiplos módulos e um arquivo __init__.py.
+
