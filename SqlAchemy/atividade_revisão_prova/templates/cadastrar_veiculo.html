@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Cadastrar Veículo</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastrar Veículo</h1>
+        <form method="POST">
+            <input type="text" name="modelo" placeholder="Modelo do Veículo" required>
+            <input type="number" name="ano" placeholder="Ano do Veículo" required>
+            <input type="text" name="marca" placeholder="Marca do Veículo" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <a href="/">Voltar</a>
+    </div>
+</body>
+<script>
+    // Muda a cor de fundo ao clicar
+    document.querySelector('button').addEventListener('click', function() {
+        document.body.style.backgroundColor = '#323050'; // Muda para uma cor da paleta
+        setTimeout(() => {
+            document.body.style.backgroundColor = '#f4f4f4'; // Retorna à cor original
+        }, 500); // Tempo em milissegundos
+    });
+</script>
+</html>
