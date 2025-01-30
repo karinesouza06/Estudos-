@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Produto</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Cadastrar Produto</h1>
+    <form method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" required>
+        <br>
+        <label for="tipo">Tipo:</label>
+        <select name="tipo" required>
+            <option value="vaso">Vaso</option>
+            <option value="planta">Planta</option>
+            <option value="flor">Flor</option>
+        </select>
+        <br>
+        <label for="preco">Preço:</label>
+        <input type="number" step="0.01" name="preco" required>
+        <br>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <a href="/">Voltar</a>
+</body>
+</html>

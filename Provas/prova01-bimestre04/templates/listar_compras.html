@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Compras</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Lista de Compras</h1>
+    </header>
+    <ul>
+        {% for compra in compras %}
+            <li>
+                <strong>Cliente:</strong> {{ compra.cliente_nome }} <br>
+                <strong>Data do Pedido:</strong> {{ compra.data_pedido }} <br>
+                <strong>Produtos:</strong> {{ compra.produtos | join(', ') }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Voltar</a>
+</body>
+</html>
